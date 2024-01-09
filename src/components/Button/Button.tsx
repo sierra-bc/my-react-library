@@ -2,9 +2,10 @@ import React, { ReactNode } from "react";
 
 export interface ButtonProps {
   children: ReactNode;
+  onClick: () => void;
 }
 
-const Button = ({ children }: ButtonProps) => {
+const Button = ({ children, onClick }: ButtonProps) => {
   return (
     <button
       style={{
@@ -14,6 +15,7 @@ const Button = ({ children }: ButtonProps) => {
         fontSize: 18,
         border: "none",
       }}
+      onClick={onClick}
     >
       {children}
     </button>
