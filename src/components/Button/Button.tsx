@@ -3,9 +3,10 @@ import React, { ReactNode } from "react";
 export interface ButtonProps {
   children: ReactNode;
   onClick: () => void;
+  type: "button" | "submit";
 }
 
-const Button = ({ children, onClick }: ButtonProps) => {
+const Button = ({ children, onClick, type = "button" }: ButtonProps) => {
   return (
     <button
       style={{
@@ -16,6 +17,7 @@ const Button = ({ children, onClick }: ButtonProps) => {
         border: "none",
       }}
       onClick={onClick}
+      type={type}
     >
       {children}
     </button>
