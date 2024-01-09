@@ -2,8 +2,8 @@ import React, { ReactNode } from "react";
 
 export interface ButtonProps {
   children: ReactNode;
-  onClick: () => void;
-  type: "button" | "submit";
+  onClick?: () => void;
+  type?: "button" | "submit";
 }
 
 const Button = ({ children, onClick, type = "button" }: ButtonProps) => {
